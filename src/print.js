@@ -1,3 +1,5 @@
 export default function printMe() {
-  console.log('I get called from print.js!');
+  const elm = document.createElement('h1');
+  elm.innerHTML = 'Hi!';
+  document.body.appendChild(elm);
 }
