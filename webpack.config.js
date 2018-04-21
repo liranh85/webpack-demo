@@ -31,5 +31,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/'
-  }
+  },
+  // The following, coupled with the added '"sideEffects": false' in package.json, enable tree-shaking. This eliminates dead-code (unusd code), such as code the unused "cube" function in the imported "math.js" module. This "mode: 'production'" utilises the UglifyPlugin minifier behind the scenes to achieve tree-shaking.
+  mode: 'production'
 };
