@@ -1,5 +1,5 @@
+console.log('The print.js module has loaded! See the network tab in dev tools...');
+
 export default function printMe() {
-  const elm = document.createElement('h1');
-  elm.innerHTML = 'Hi!';
-  document.body.appendChild(elm);
+  console.log('Button clicked: Here\'s "some text"!');
 }
