@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -13,6 +14,11 @@ module.exports = {
       title: 'Code Splitting'
     })
   ],
+  optimization: {
+    splitChunks: {
+      name: 'common' // Specify the common bundle's name.
+    }
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
